@@ -1,0 +1,141 @@
+@function rem($px) {
+    @return $px / 37.5px * 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: rem(1400px);
+    background: #59826b;
+    .computer {
+        position: absolute;
+        top: rem(100px);
+        left: rem(200px);
+        width: rem(900px);
+        height: rem(700px);
+        animation: computer-trans 1s linear;
+    }
+    .box {
+        position: absolute;
+        top: rem(300px);
+        left: rem(1050px);
+        transform: scale(0);
+        animation: box-trans 1s linear 1s forwards;
+        img {
+            animation: img-rota 0.3s linear forwards alternate;
+        }
+    }
+    .logo {
+        position: absolute;
+        right: rem(300px);
+        top: rem(100px);
+        animation: logo-trans 2s linear;
+    }
+    .r {
+        position: absolute;
+        right: rem(200px);
+        top: rem(300px);
+        // animation: r-trans 1s linear reverse;
+    }
+    .gb {
+        position: absolute;
+        right: rem(370px);
+        top: rem(360px);
+        transform: translateX(170%);
+        animation: r-trans 1s linear 1s forwards;
+    }
+    .want {
+        position: absolute;
+        right: rem(700px);
+        top: rem(600px);
+        transform: translateX(400%);
+        animation: r-trans 1s linear 1s forwards;
+    }
+    .job {
+        position: absolute;
+        right: rem(200px);
+        top: rem(550px);
+        transform: translateX(300%);
+        animation: r-trans 1s linear 1.5s forwards;
+    }
+    .want2 {
+        position: absolute;
+        right: rem(700px);
+        top: rem(800px);
+        transform: translateX(400%);
+        animation: r-trans 1s linear 2.5s forwards;
+    }
+    .free {
+        position: absolute;
+        right: rem(200px);
+        top: rem(750px);
+        transform: translateX(300%);
+        animation: r-trans 1s linear 3s forwards;
+    }
+    .txt {
+        position: absolute;
+        right: rem(200px);
+        top: rem(1000px);
+        transform: translateY(300%);
+        animation: txt-trans 1s linear 3.5s forwards;
+    }
+}
+
+@keyframes computer-trans {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes box-trans {
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes img-rota {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes logo-trans {
+    from {
+        transform: translateY(-110%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes r-trans {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes txt-trans {
+    to {
+        transform: translateY(0);
+    }
+}

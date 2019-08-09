@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 37.33333rem;
+  background: #59826b;
+}
+
+.wrapper .computer {
+  position: absolute;
+  top: 2.66667rem;
+  left: 5.33333rem;
+  width: 24rem;
+  height: 18.66667rem;
+  animation: computer-trans 1s linear;
+}
+
+.wrapper .box {
+  position: absolute;
+  top: 8rem;
+  left: 28rem;
+  transform: scale(0);
+  animation: box-trans 1s linear 1s forwards;
+}
+
+.wrapper .box img {
+  animation: img-rota 0.3s linear forwards alternate;
+}
+
+.wrapper .logo {
+  position: absolute;
+  right: 8rem;
+  top: 2.66667rem;
+  animation: logo-trans 2s linear;
+}
+
+.wrapper .r {
+  position: absolute;
+  right: 5.33333rem;
+  top: 8rem;
+}
+
+.wrapper .gb {
+  position: absolute;
+  right: 9.86667rem;
+  top: 9.6rem;
+  transform: translateX(170%);
+  animation: r-trans 1s linear 1s forwards;
+}
+
+.wrapper .want {
+  position: absolute;
+  right: 18.66667rem;
+  top: 16rem;
+  transform: translateX(400%);
+  animation: r-trans 1s linear 1s forwards;
+}
+
+.wrapper .job {
+  position: absolute;
+  right: 5.33333rem;
+  top: 14.66667rem;
+  transform: translateX(300%);
+  animation: r-trans 1s linear 1.5s forwards;
+}
+
+.wrapper .want2 {
+  position: absolute;
+  right: 18.66667rem;
+  top: 21.33333rem;
+  transform: translateX(400%);
+  animation: r-trans 1s linear 2.5s forwards;
+}
+
+.wrapper .free {
+  position: absolute;
+  right: 5.33333rem;
+  top: 20rem;
+  transform: translateX(300%);
+  animation: r-trans 1s linear 3s forwards;
+}
+
+.wrapper .txt {
+  position: absolute;
+  right: 5.33333rem;
+  top: 26.66667rem;
+  transform: translateY(300%);
+  animation: txt-trans 1s linear 3.5s forwards;
+}
+
+@keyframes computer-trans {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box-trans {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes img-rota {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes logo-trans {
+  from {
+    transform: translateY(-110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes r-trans {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes txt-trans {
+  to {
+    transform: translateY(0);
+  }
+}
